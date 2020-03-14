@@ -1,0 +1,5 @@
+.App {
+  @include grid-container(1.25em);
+  grid-auto-flow: row;
+  height: inherit;
+}

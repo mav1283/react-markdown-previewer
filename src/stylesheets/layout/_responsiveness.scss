@@ -1,0 +1,36 @@
+/* Media Queries */
+
+@media screen and (min-width: 0px) {
+  body {
+    padding: 2rem;
+  }
+
+  .App {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+  }
+
+  #input-area {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+
+  #display-area {
+    grid-column: span 12;
+    grid-row: span 4;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 4rem;
+  }
+  #input-area {
+    grid-column: 1 / span 4;
+    grid-row: 1 / -1;
+  }
+  #display-area {
+    grid-column: 5 / -1;
+    grid-row: 1 / -1;
+  }
+}

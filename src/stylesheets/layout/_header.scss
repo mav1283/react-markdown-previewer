@@ -1,0 +1,64 @@
+.col-head {
+  @include two-sides-padded-container(1em, 1.25em);
+  @include top-edges-border-radius(inherit);
+  @include grid-container(0);
+  align-self: start;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  h1 {
+    @include grid-container(0.75em);
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .col-head-btn {
+    border: none;
+    @extend .flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+#input-header {
+  background-color: var(--midnight-blue);
+  color: #fff;
+  #input-btn {
+    color: var(--trans-light-6);
+  }
+
+  #input-btn:hover {
+    color: var(--trans-light-2);
+  }
+}
+
+#input-body {
+  background: var(--wet-asphalt);
+}
+
+#display-header {
+  background: var(--sunflower);
+  color: var(--trans-dark-6);
+  #display-btn {
+    color: var(--trans-dark-6);
+  }
+
+  #display-btn:hover {
+    color: var(--trans-dark-2);
+  }
+}
+
+#display-body {
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+}

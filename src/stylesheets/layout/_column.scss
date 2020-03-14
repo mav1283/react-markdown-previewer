@@ -1,0 +1,117 @@
+.column {
+  @include bordered-container(1px, solid, var(--trans-dark-1));
+  @include border-radius(6px);
+  @include box-shadow(solid, 0, 1px, 2px, var(--trans-dark-3));
+  @include grid-container(0);
+  grid-template-rows: 51px 1fr;
+  opacity: 1;
+  transition: 0.25s linear;
+}
+
+#display-area.min {
+  display: none;
+  transition: 0.25s linear;
+}
+
+#input-area.min {
+  display: none;
+  transition: 0.25s linear;
+}
+
+#display-area.max {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 12;
+  transition: 0.25s linear;
+}
+
+#input-area.max {
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 12;
+  transition: 0.25s linear;
+}
+
+#editor {
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  outline-color: transparent;
+  overflow-y: auto;
+  resize: none;
+}
+
+/* Editor Scroll Bar */
+/* Width and Height */
+#editor::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+/* Track */
+#editor::-webkit-scrollbar-track {
+  @include border-radius(10px);
+  background: var(--trans-dark-2);
+}
+
+#editor::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+/* Handle */
+#editor::-webkit-scrollbar-thumb {
+  @include border-radius(10px);
+  background: var(--trans-light-2);
+  @include bordered-container(1px, solid, var(--trans-dark-1));
+}
+
+#editor::-webkit-scrollbar-thumb:hover {
+  @include box-shadow(inset, 0, 0, 6px, var(--trans-dark-1));
+}
+
+#editor::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Previewer Scroll Bar */
+/* Width and Height */
+#preview::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+/* Track */
+#preview::-webkit-scrollbar-track {
+  @include border-radius(10px);
+  background: var(--trans-dark-3);
+}
+
+#preview::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+/* Handle */
+#preview::-webkit-scrollbar-thumb {
+  @include border-radius(10px);
+  background: rgba(255, 255, 255, 0.5);
+  @include bordered-container(1px, solid, var(--trans-dark-1));
+}
+
+#preview::-webkit-scrollbar-thumb:hover {
+  @include box-shadow(inset, 0, 0, 6px, var(--trans-dark-1));
+}
+
+#preview::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.col-body {
+  grid-row: 2/-1;
+  padding: 1.25em;
+  @include bottom-edges-border-radius(inherit);
+  position: relative;
+}
